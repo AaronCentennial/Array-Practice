@@ -14,7 +14,7 @@ public class Die {
 	}
 
 	public void _rollDie() {
-		this._dieValue=this._random.nextInt(5)+1;
+		this._dieValue=this._random.nextInt(6)+1;
 	}
 
 	public int get_dieValue() {

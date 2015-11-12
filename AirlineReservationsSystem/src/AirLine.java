@@ -11,21 +11,22 @@ public class AirLine {
 		this._genPlaneList();
 	}
 
+	/*
+	* Generate plane list
+	* with the first five being first class(true)
+	* and the last five being economy(false)
+	*/
 	private void _genPlaneList() {
 		for (int i=0;i<10;i++){
 			if (i<5){this._seats.add(true);}
 			else{this._seats.add(false);}
-
 		}
 	}
 
+	/* */
 	public int getNumFirstClassSeats(){
 		int rValue=0;
-
-		for(Boolean i : this._seats){
-			if (i){rValue++;}
-		}
-
+		for(Boolean i : this._seats){if (i){rValue++;}}
 		return rValue;
 	}
 

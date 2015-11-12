@@ -1,10 +1,11 @@
 import java.security.SecureRandom;
 
-/**
+
+/*
  * Created by Aaron Fernandes(300773526) on November 2015.
  */
 public class Die {
-	private SecureRandom _random;
+	private final SecureRandom _random;
 	private int _dieValue;
 
 	Die(){

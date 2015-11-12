@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
+/*
  * Created by Aaron Fernandes(300773526) on November 2015.
  */
 public class AirLineGui extends JFrame implements ActionListener {
@@ -50,17 +50,9 @@ public class AirLineGui extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent actionEvent) {
-		if (actionEvent.getSource()==this._exitbtn){
-			int choice=JOptionPane.showOptionDialog(null, "Are you sure you want to exit", "Do you?", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
-
-			if (choice==JOptionPane.YES_OPTION){System.exit(0);}
-		}
-		else if(actionEvent.getSource()==this._fclassbtn){
-			this._removeFirstClass();
-		}
-		else if (actionEvent.getSource()==this._eclassbtn){
-			this._removeEconomyClass();
-		}
+		if (actionEvent.getSource()==this._exitbtn){System.exit(0);}
+		else if(actionEvent.getSource()==this._fclassbtn){this._removeFirstClass();}
+		else if (actionEvent.getSource()==this._eclassbtn){this._removeEconomyClass();}
 
 	}
 

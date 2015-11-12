@@ -1,13 +1,15 @@
 import javax.swing.*;
 
-/**
+/*
  * Created by Aaron Fernandes(300773526) on November 2015.
  */
 public class AirLineProgram {
 	public static void main(String[] args){
 
 		for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
-			if ("GTK+".equals(info.getName()) || "windows".equals(info.getName()) || "substance".equals(info.getName())) {
+			System.out.print(info.toString()+"\n");
+			if ("GTK+".equals(info.getName()) || "Windows".equals(info.getName()) || "substance".equals(info.getName()) || "Aqua".equals(info.getName())) {
+				//"Nimbus".equals(info.getName())
 				try {
 					UIManager.setLookAndFeel(info.getClassName());
 				} catch (ClassNotFoundException e) {
@@ -23,14 +25,6 @@ public class AirLineProgram {
 			}
 		}
 
-/*
-		try {
-			UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}*/
-
-		AirLine air = new AirLine();
-		AirLineGui gui = new AirLineGui(air);
+		new AirLineGui(new AirLine());
 	}
 }
